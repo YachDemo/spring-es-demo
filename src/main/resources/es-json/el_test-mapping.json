@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "id": {
+      "type": "text"
+    },
+    "name": {
+      "type": "text",
+      "analyzer": "ikIndexAnalyzer",
+      "fields": {
+        "ngram": {
+          "type": "text",
+          "analyzer": "ngramIndexAnalyzer"
+        },
+        "SPY": {
+          "type": "text",
+          "analyzer": "pinyiSimpleIndexAnalyzer"
+        },
+        "FPY": {
+          "type": "text",
+          "analyzer": "pinyiFullIndexAnalyzer"
+        }
+      }
+    },
+    "location": {
+      "type": "geo_point"
+    }
+  }
+}
